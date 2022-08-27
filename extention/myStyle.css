@@ -19,6 +19,14 @@
     margin-top:0.5rem !important;
     box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem white !important;
 }
+
+.results>div{
+    box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem white !important;
+    padding-right: 0.25rem;
+    margin-top: 0.75rem;
+    border-radius: 16px;
+    background-color:transparent !important;
+}
 .suggest-item{
     margin-top: 0.25rem;
     padding: 0.17rem 0rem;
