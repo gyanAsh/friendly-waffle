@@ -20,6 +20,7 @@
     box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem white !important;
 }
 .suggest-item{
+    margin-top: 0.25rem;
     padding: 0.17rem 0rem;
 }
 .suggest-item:hover{
