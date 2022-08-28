@@ -1,6 +1,8 @@
-chrome.tabs.onUpdated.addListener((tabId,tab) => {
-    if (tab.url && /^https:\/\/www\.google/.test(tab.url)) {
-    // if (tab.url && tab.url === "https://www.google.com") {
+chrome.tabs.onUpdated.addListener((tabId, tab) => {
+    let regex = /^https:\/\/www\.google/;
+    // if (tab.url && /regex.test(tab.url)) {
+    if (tab.url && regex.test(tab.url) && !tab.url.match(/search/)) {
+            
         chrome.scripting.insertCSS({
             target: { tabId: tabId },
             files:['./myStyle.css']
