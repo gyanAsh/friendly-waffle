@@ -1,18 +1,19 @@
 chrome.tabs.onUpdated.addListener((tabId, tab) => {
     let regex = /^https:\/\/www\.google/;
-    // if (tab.url && /regex.test(tab.url)) {
+    // CSS added to the main page.
     if (tab.url && regex.test(tab.url) && !tab.url.match(/search/)) {
-            
-        chrome.scripting.insertCSS({
-            target: { tabId: tabId },
-            files:['./myStyle.css']
-        }, () => console.log("This is insert Css Script"));
 
         chrome.scripting.executeScript({
             target: {tabId:tabId},
-            files: ['./foreground.js'],
+            files: ['./foregroundGoogle.js'],
         }, () => console.log("It is alive!!"));
+
+        chrome.scripting.insertCSS({
+            target: { tabId: tabId },
+            files:['./myGoogleStyle.css']
+        }, () => console.log("This is insert Css Script"));
+
     }
 })
 
-console.log("It is the background file")
+console.log("It is the background file");
